@@ -11,53 +11,40 @@
 </head>
 <body>
 
-<!-- 
-<input class="input" type="text">
-<input class="ouput" type="text"> -->
+<main class="grid">
+  <div class="container-1">
 
-<!-- 
-  0000 0000 0000 0000
-  Jane Appleseed
-  00/00
-
-  000
-
-  Cardholder Name
-  e.g. Jane Appleseed
-
-  Card Number
-  e.g. 1234 5678 9123 0000
-
-  Exp. Date (MM/YY)
-  MM
-  YY
-
-  CVC
-  e.g. 123
-
-  Confirm
-
-   Completed state start
-
-  Thank you!
-  We've added your card details
-  Continue -->
+  </div>
+  <div class="container-2">
+    <form class="form" action="">
+      <!-- name input -->
+      <div class="card-name">
+        <label class="cardholder-label" for="name">CARDHOLDER NAME</label>
+        <input class="name-input" type="text" placeholder="e.g Jane Appleseed">
+      </div>
+      <!-- card-number input -->
+      <div class="card-number">
+        <label class="card-number-label" for="number">CARD NUMBER</label>
+        <input class="number-input" type="text" placeholder="e.g 1234 5678 0000">
+      </div>
+      <!-- exp date input -->
+      <div class="card-credentials">
+        
+        <label class="exp-label" for="number">EXP. DATE (MM/YY)</label>
+         
+        <input class="exp-mm" type="text" placeholder="MM">
+        <input class="exp-yy" type="text" placeholder="yy">
+        
+        <label class="cvc-label" for="number">CVC</label>
+        <input class="cvc" type="text" placeholder="e.g 123">
   
+      </div>
+      
+      <button class="button">Confirm</button>
+    </form>
+  </div>
+</main>
 
-
-  <input class="input">
-  <input class="output">
-  <script>
-
-    const input = document.querySelector('.input')
-    const output = document.querySelector('.output')
-
-     input.addEventListener("input", function() {
-    output.value = this.value;
-  });
-  </script>
-
-
-  <!-- <script src="script.js"></script> -->
+   <script src="script.js"></script>
 </body>
 </html>
