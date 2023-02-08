@@ -10,10 +10,20 @@
 
 </head>
 <body>
+  <div class="card-output">
+    <input class="output-number" placeholder="0000 0000 0000 0000"/>
+    <div class="name">
+      <input class="output-name" placeholder="JANE APPLESEED"/>
+      <input class="output-mm" type="number" placeholder="00/"/>
+      <input class="output-yy" type="number" placeholder="00"/>
+  </div>
+  </div>
+  <div class="cvc-output">
+    <input class="cvc-output-number" placeholder="000"/>
+  </div>
 
 <main class="grid">
   <div class="container-1">
-
   </div>
   <div class="container-2">
     <form class="form" action="">
@@ -25,7 +35,8 @@
       <!-- card-number input -->
       <div class="card-number">
         <label class="card-number-label" for="number">CARD NUMBER</label>
-        <input class="number-input" type="text" placeholder="e.g 1234 5678 0000">
+        <input class="number-input" type="number" placeholder="e.g 1234 5678 0000">
+        <p class="card-error-message"></p>
       </div>
       <!-- exp date input -->
       <div class="card-credentials">
@@ -33,10 +44,14 @@
         <label class="exp-label" for="number">EXP. DATE (MM/YY)</label>
          
         <input class="exp-mm" type="text" placeholder="MM">
+        <p class="error-message-mm"></p>
         <input class="exp-yy" type="text" placeholder="yy">
+        <p class="error-message-yy"></p>
         
         <label class="cvc-label" for="number">CVC</label>
-        <input class="cvc" type="text" placeholder="e.g 123">
+        <input class="cvc" type="number" placeholder="e.g 123">
+        <p class="error-message-cvc"></p>
+
   
       </div>
       
