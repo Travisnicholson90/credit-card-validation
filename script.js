@@ -23,26 +23,31 @@ const cvcOutput = document.querySelector('.cvc-output-number')
 
 
 
-
-function names() {
-    
-    nameInput.addEventListener('input', function() {
-        nameOutput.value = this.value
-        
-    })
-}
-
 form.addEventListener('submit', (e) => {
+   
+    const regExp = /^\d+$/
+
+   
     e.preventDefault()
 
-    names()
+    if(regExp.test(numberInput.value)) {
+        console.log('numbers') 
+    } else {
+        console.log('not numbers')
+    }
 
 })    
+ 
 
 
+nameInput.addEventListener('input', function() {
+    nameOutput.value = this.value
+    
+})
 
 numberInput.addEventListener('input', function() {
     numberOutput.value = this.value
+    
 
 })
 
