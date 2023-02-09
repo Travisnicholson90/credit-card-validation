@@ -29,6 +29,11 @@ const mmError = document.querySelector('.error-message-mm')
 const yyError = document.querySelector('.error-message-yy')
 const cvcError = document.querySelector('.error-message-cvc')
 
+// * toggle between completed states
+const containerTwo = document.querySelector('.container-2')
+const completedState = document.querySelector('.completed-state')
+
+
 form.addEventListener('submit', (e) => {
     
     const regExp = /^\d+$/
@@ -54,7 +59,13 @@ form.addEventListener('submit', (e) => {
         cvcError.innerHTML = 'Can\'t be blank'
     }
     
+    containerTwo.classList.toggle('hidden')
+    completedState.classList.toggle('visible')
+
     e.preventDefault()
+
+
+
 })    
 
 nameInput.addEventListener('input', function() {

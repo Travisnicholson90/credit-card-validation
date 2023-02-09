@@ -334,6 +334,57 @@ input {
   border: 2px solid var(--Red);
 }
 
+/* *completed container */
+.container-2.hidden {
+  visibility: hidden;
+}
+
+  .completed-state {
+    visibility: hidden;
+    position: absolute;
+    top: 25rem;
+    left: -40px;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+  }
+  .completed-state.visible {
+    visibility: visible;
+    position: absolute;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+  }
+
+  .completed-state img {
+    width: 80px;
+  }
+
+  .completed-state button, img {
+    margin: 2rem
+  }
+
+  .completed-state h2 {
+    padding-bottom: 0.5rem;
+    letter-spacing: 3px;
+    color: var(--Very-dark-violet);
+  }
+  .completed-state p {
+    color: var(--Dark-grayish-violet);
+  }
+
+  .button-complete {
+    display: flex;
+    align-items: center;
+    background: var(--Very-dark-violet);
+    color: var(--White);
+    width: 440px;
+    justify-content: center;
+    padding: 1rem;
+    margin-top: 1rem;
+    margin-inline: auto;
+    border-radius: 10px;
+}
 
 
 @media screen and (min-width: 1000px) {
@@ -397,7 +448,28 @@ input {
     background: inherit;
   }
   
- 
+  /* *completed container */
+
+.container-2.hidden {
+  visibility: hidden;
+}
+
+  .completed-state {
+    visibility: hidden;
+    position: absolute;
+    top: 15rem;
+    left: 25rem;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+  }
+  .completed-state.visible {
+    visibility: visible;
+    position: absolute;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+  }
 
 }
 
@@ -472,6 +544,27 @@ input {
   border: none;
   background: inherit;
 }
+/* *completed container */
+.container-2.hidden {
+  visibility: hidden;
+}
+
+  .completed-state {
+    visibility: hidden;
+    position: absolute;
+    top: 15rem;
+    left: 35rem;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+  }
+  .completed-state.visible {
+    visibility: visible;
+    position: absolute;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+  }
 
 }
 
@@ -490,6 +583,31 @@ input {
     background-position: 16rem 13rem, 20rem 30rem;
 }
 
+/* *completed container */
+
+.container-2.hidden {
+  visibility: hidden;
+}
+
+  .completed-state {
+    visibility: hidden;
+    position: absolute;
+    top: 17rem;
+    left: 50rem;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+  }
+  .completed-state.visible {
+    visibility: visible;
+    position: absolute;
+    top: 17rem;
+    right: 17rem;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+  }
+
 .card-output {
   z-index: 1;
   position: absolute;
@@ -501,7 +619,6 @@ input {
   width: max-content;
   height: 100px;
 }
-
 
 .output-name {
   background: inherit;
