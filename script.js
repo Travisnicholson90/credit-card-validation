@@ -35,48 +35,51 @@ const completedState = document.querySelector('.completed-state')
 
 
 form.addEventListener('submit', (e) => {
+    e.preventDefault()
     
     const regExp = /^\d+$/
-    
+// create a condition that allows the form to be submitted if there are no errors
+    let error = false;
+
     if(regExp.test(numberInput.value)) {
-        //console.log('numbers') 
+        console.log('valid number')
     } else {
         //console.log('not numbers')
         numberInput.classList.toggle('active')
         numberError.innerHTML = 'Wrong format, numbers only.'
+        error = true
     }
     
     if(mmInput.value === '') {
         mmInput.classList.toggle('active')
         mmError.innerHTML = 'Can\'t be blank'
+        error = true
     }  
     if (yyInput.value === '') {
         yyInput.classList.toggle('active')
         yyError.innerHTML = 'Can\'t be blank'
+        error = true
     }
     if (cvcInput.value === '') {
         cvcInput.classList.toggle('active')
         cvcError.innerHTML = 'Can\'t be blank'
+        error = true
     }
     
+    if(!error) {
     containerTwo.classList.toggle('hidden')
     completedState.classList.toggle('visible')
-
-    e.preventDefault()
-
-
+    }
 
 })    
 
+// duplicated values from form to card image
 nameInput.addEventListener('input', function() {
     nameOutput.value = this.value
-    
 })
 
 numberInput.addEventListener('input', function() {
     numberOutput.value = this.value
-    
-    
 })
 
 mmInput.addEventListener('input', function() {
@@ -88,8 +91,7 @@ yyInput.addEventListener('input', function() {
 })
 
 cvcInput.addEventListener('input', function() {
-    cvcOutput.value = this.value
-    
+    cvcOutput.value = this.value   
 })
 
 
