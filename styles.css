@@ -218,11 +218,80 @@ input {
     opacity: 0.9;
 }
 
+.card-output input::placeholder {
+  color: var(--White);
+}
+.cvc-output input::placeholder {
+  color: var(--White);
+}
+
+.card-output {
+  z-index: 1;
+  position: absolute;
+  top: 17.5rem;
+  left: 2rem;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: max-content;
+  height: 100px;
+  font-size: 18px;
+}
+
+.output-name {
+  background: inherit;
+  border: none;
+  color: var(--White);
+
+}
+
+.name {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px;
+}
+.output-number {
+  font-size: 24px;
+  background-color: inherit;
+  border: none;
+  color: var(--White);
+}
+
+.output-mm {
+  background: inherit;
+  margin-left: 5rem;
+  border: none;
+  width: 45px;
+  color: var(--White);
+}
+.output-yy {
+  background: inherit;
+  margin-left: -10px;
+  border: none;
+  width: 40px;
+  color: var(--White);
+}
+.cvc-output-number {
+  position: absolute;
+  color: white;
+  top: 8.8rem;
+  left: 25rem;
+  width: 40px;
+  border: none;
+  background: inherit;
+  font-size: 16px;
+}
+
+
+
+
+
+
 /* * Card error styles */
 .card-number {
   position: relative;
 }
-.card-error-message.active {
+.card-error-message {
   position: absolute;
   font-size: 14px;
   color: var(--Red);
@@ -230,21 +299,21 @@ input {
   left: 20px;
 }
 
-.error-message-mm.active {
+.error-message-mm {
   position: absolute;
   font-size: 12px;
   color: var(--Red);
   top: 130px;
   left: 18px;
 }
-.error-message-yy.active {
+.error-message-yy {
   position: absolute;
   font-size: 12px;
   color: var(--Red);
   top: 130px;
   left: 120px;
 }
-.error-message-cvc.active {
+.error-message-cvc {
   position: absolute;
   font-size: 12px;
   color: var(--Red);
@@ -300,7 +369,35 @@ input {
   .form {
     max-width: 32rem;
   }
+  .button {
+    width: 30rem;
 
+  }
+ 
+  .card-output {
+    z-index: 1;
+    position: absolute;
+    top: 21.5rem;
+    left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    width: max-content;
+    height: 100px;
+    font-size: 16px;
+  }
+  
+  .cvc-output-number {
+    position: absolute;
+    color: white;
+    top: 35.2rem;
+    left: 21.5rem;
+    width: 40px;
+    border: none;
+    background: inherit;
+  }
+  
+ 
 
 }
 
@@ -319,6 +416,63 @@ input {
     background-position: 8rem 13rem, 10rem 30rem;
 
 }
+
+.card-output {
+  z-index: 1;
+  position: absolute;
+  top: 20rem;
+  left: 9.5rem;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  width: max-content;
+  height: 100px;
+}
+
+
+.output-name {
+  background: inherit;
+  border: none;
+  color: var(--White);
+
+}
+
+.name {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px;
+}
+.output-number {
+  font-size: 24px;
+  background-color: inherit;
+  border: none;
+  color: var(--White);
+}
+
+.output-mm {
+  background: inherit;
+  margin-left: 5rem;
+  border: none;
+  width: 45px;
+  color: var(--White);
+}
+.output-yy {
+  background: inherit;
+  margin-left: -10px;
+  border: none;
+  width: 40px;
+  color: var(--White);
+}
+.cvc-output-number {
+  position: absolute;
+  color: white;
+  top: 35.9rem;
+  left: 30rem;
+  width: 40px;
+  border: none;
+  background: inherit;
+}
+
 }
 
 @media screen and (min-width: 1300px) {
@@ -372,14 +526,14 @@ input {
   background: inherit;
   margin-left: 5rem;
   border: none;
-  width: 35px;
+  width: 45px;
   color: var(--White);
 }
 .output-yy {
   background: inherit;
-  margin-left: 0rem;
+  margin-left: -10px;
   border: none;
-  width: 35px;
+  width: 40px;
   color: var(--White);
 }
 .cvc-output-number {

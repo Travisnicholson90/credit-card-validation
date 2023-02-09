@@ -14,7 +14,7 @@
     <input class="output-number" placeholder="0000 0000 0000 0000"/>
     <div class="name">
       <input class="output-name" placeholder="JANE APPLESEED"/>
-      <input class="output-mm" type="number" placeholder="00/"/>
+      <input class="output-mm" type="number" placeholder="00"/>
       <input class="output-yy" type="number" placeholder="00"/>
   </div>
   </div>
@@ -35,7 +35,7 @@
       <!-- card-number input -->
       <div class="card-number">
         <label class="card-number-label" for="number">CARD NUMBER</label>
-        <input class="number-input" type="text" placeholder="e.g 1234 5678 0000">
+        <input class="number-input" type="text" placeholder="e.g 1234 5678 0000" maxlength="16">
         <p class="card-error-message"></p>
       </div>
       <!-- exp date input -->
@@ -43,13 +43,13 @@
         
         <label class="exp-label" for="number">EXP. DATE (MM/YY)</label>
          
-        <input class="exp-mm" type="text" placeholder="MM">
+        <input class="exp-mm" type="text" placeholder="MM" maxlength="2">
         <p class="error-message-mm"></p>
-        <input class="exp-yy" type="text" placeholder="yy">
+        <input class="exp-yy" type="text" placeholder="yy" maxlength="2">
         <p class="error-message-yy"></p>
         
         <label class="cvc-label" for="number">CVC</label>
-        <input class="cvc" type="number" placeholder="e.g 123">
+        <input class="cvc" type="text" placeholder="e.g 123" maxlength="3">
         <p class="error-message-cvc"></p>
 
   

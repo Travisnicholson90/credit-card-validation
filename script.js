@@ -1,4 +1,6 @@
 
+
+
 const form = document.querySelector('.form')
 // * name duplicate form to card
 const nameInput = document.querySelector('.name-input')
@@ -21,24 +23,39 @@ const yyOutput = document.querySelector('.output-yy')
 const cvcInput = document.querySelector('.cvc')
 const cvcOutput = document.querySelector('.cvc-output-number')
 
-
+// * input errors
+const numberError = document.querySelector('.card-error-message')
+const mmError = document.querySelector('.error-message-mm')
+const yyError = document.querySelector('.error-message-yy')
+const cvcError = document.querySelector('.error-message-cvc')
 
 form.addEventListener('submit', (e) => {
-   
+    
     const regExp = /^\d+$/
-
-   
-    e.preventDefault()
-
+    
     if(regExp.test(numberInput.value)) {
-        console.log('numbers') 
+        //console.log('numbers') 
     } else {
-        console.log('not numbers')
+        //console.log('not numbers')
+        numberInput.classList.toggle('active')
+        numberError.innerHTML = 'Wrong format, numbers only.'
     }
-
+    
+    if(mmInput.value === '') {
+        mmInput.classList.toggle('active')
+        mmError.innerHTML = 'Can\'t be blank'
+    }  
+    if (yyInput.value === '') {
+        yyInput.classList.toggle('active')
+        yyError.innerHTML = 'Can\'t be blank'
+    }
+    if (cvcInput.value === '') {
+        cvcInput.classList.toggle('active')
+        cvcError.innerHTML = 'Can\'t be blank'
+    }
+    
+    e.preventDefault()
 })    
- 
-
 
 nameInput.addEventListener('input', function() {
     nameOutput.value = this.value
@@ -48,7 +65,7 @@ nameInput.addEventListener('input', function() {
 numberInput.addEventListener('input', function() {
     numberOutput.value = this.value
     
-
+    
 })
 
 mmInput.addEventListener('input', function() {
@@ -61,4 +78,7 @@ yyInput.addEventListener('input', function() {
 
 cvcInput.addEventListener('input', function() {
     cvcOutput.value = this.value
+    
 })
+
+
